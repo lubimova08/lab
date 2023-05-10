@@ -1,0 +1,92 @@
+object Form1: TForm1
+  Left = 1159
+  Height = 385
+  Top = 436
+  Width = 657
+  Caption = 'ростой текстовый редактор'
+  ClientHeight = 365
+  ClientWidth = 657
+  Menu = MainMenu1
+  LCLVersion = '2.2.0.4'
+  object Memo1: TMemo
+    Left = 0
+    Height = 365
+    Top = 0
+    Width = 657
+    Align = alClient
+    Lines.Strings = (
+      ''
+    )
+    TabOrder = 0
+  end
+  object MainMenu1: TMainMenu
+    Left = 22
+    Top = 26
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      object MenuItem4: TMenuItem
+        Caption = 'Создать'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Открыть'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem6Click
+      end
+      object MenuItem7: TMenuItem
+        Caption = 'Сохранить как...'
+        OnClick = MenuItem7Click
+      end
+      object MenuItem8: TMenuItem
+        Caption = 'Вывод'
+        OnClick = MenuItem8Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Правка'
+      OnClick = MenuItem2Click
+      object MenuItem9: TMenuItem
+        Caption = 'Вырезать'
+        OnClick = MenuItem9Click
+      end
+      object MenuItem10: TMenuItem
+        Caption = 'Копировать'
+        OnClick = MenuItem10Click
+      end
+      object MenuItem11: TMenuItem
+        Caption = 'Вставить'
+        OnClick = MenuItem11Click
+      end
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Формат'
+      object MenuItem12: TMenuItem
+        Caption = 'Перенос по словам'
+        OnClick = MenuItem12Click
+      end
+      object MenuItem13: TMenuItem
+        Caption = 'Шрифт...'
+        OnClick = MenuItem13Click
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Текстовый документ|*.txt|Все|*.*'
+    Left = 480
+    Top = 40
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Текстовый документ|*.txt|Все|*.*'
+    Left = 536
+    Top = 40
+  end
+  object FontDialog1: TFontDialog
+    MinFontSize = 0
+    MaxFontSize = 0
+    Left = 592
+    Top = 40
+  end
+end
